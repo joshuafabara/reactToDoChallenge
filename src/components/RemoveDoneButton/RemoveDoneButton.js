@@ -1,14 +1,13 @@
-// import logo from './logo.svg';
-import './App.css';
-import ToDoList from './components/ToDoList/ToDoList'
+import '../../App.css';
+import logo from '../../logo.svg';
 
-function App() {
+function ToDoList() {
   return (
     <div className="App">
-      {/* <header className="App-header">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/ToDoList.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -18,10 +17,9 @@ function App() {
         >
           Learn React
         </a>
-      </header> */}
-      < ToDoList/>
+      </header>
     </div>
   );
 }
 
-export default App;
+export default ToDoList;
