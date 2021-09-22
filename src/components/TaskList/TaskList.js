@@ -31,7 +31,6 @@ function TaskList(props) {
     // });
     // console.log(`taskKey: ${taskKey}`);
     const updatedTaskKey = tempList.findIndex(task => task.id === name);
-    console.log(`indiex of changed element: ${updatedTaskKey}`);
     let tempTask = { ...tempList[updatedTaskKey] };
     tempTask.done ? tempTask.done = false: tempTask.done = true;
     tempList[updatedTaskKey] = tempTask;
@@ -39,9 +38,6 @@ function TaskList(props) {
 	};
 
   const deleteAllDone = () => {
-    console.log('gonaa clean this up');
-    // console.log(`updateList initial state before deleting done`);
-    // console.log(updateList);
     let tempList = [...list];
     let tempToDoTasks = tempList.filter(task => task.done === false);
     // let tempTask = { ...tempList[updatedTaskKey] };
