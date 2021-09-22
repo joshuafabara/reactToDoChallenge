@@ -7,10 +7,13 @@ function Checkbox(props) {
   const id = props.data.id;
   const text = props.data.text;
 
+  const taskDone = done === true ? 'Is Done' : 'NOT Done';
+
   console.log(`Props checkbox done: ${done}`);
   return (
     <Fragment>
       <label className="checkbox">
+        {taskDone}
         <input
           className="checkbox__item"
           name={id}

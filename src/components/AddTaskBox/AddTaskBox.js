@@ -8,11 +8,13 @@ function AddTaskBox(props) {
 
   const handleSubmit = e => {
 		e.preventDefault();
-		handleAddItem({
-			id: (+new Date()).toString(),
-			text: newTask,
-			done: false
-		});
+    if (newTask.trim() !== '') {
+      handleAddItem({
+        id: (+new Date()).toString(),
+        text: newTask,
+        done: false
+      });
+    }
 		setNewTask('');
 	};
 
@@ -31,7 +33,7 @@ function AddTaskBox(props) {
             />
           </div>
           <div className="add-task-box__button">
-            <button type="button" onClick={handleSubmit} disabled={newTask ? "" : "disabled"}>Add</button>
+            <button type="button" onClick={handleSubmit} disabled={newTask.trim() !== '' ? "" : "disabled"}>Add</button>
           </div>
         </div>
       </form>

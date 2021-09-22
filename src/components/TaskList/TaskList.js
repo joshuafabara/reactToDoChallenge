@@ -54,6 +54,7 @@ function TaskList(props) {
   useEffect(() => {
     console.log(`updateList final state after changing checkboxes`);
     console.log(list);
+    updateList(list);
   });
 
   return (
